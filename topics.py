@@ -81,7 +81,7 @@ plt.xticks(np.arange(data_arr.shape[1])+0.5, topic_labels, rotation='90')
 plt.gca().invert_yaxis()
 plt.colorbar(cmap='autumn')
 plt.tight_layout()
-plt.savefig('topics_heatmap.png')
+plt.savefig('imgs/topics_heatmap.png')
 
 #set up count array        
 words = []
@@ -101,7 +101,7 @@ for idx, topic_words in lda_model.show_topics():
             g.add_edge(idx,m)
        
 #export the graph as gexf so that it can be used in Gephi
-nx.write_gexf(g, "manifest.gexf")
+nx.write_gexf(g, "imgs/manifest.gexf")
 
 #Counter of topic words
 counted_words = Counter(words)
@@ -121,4 +121,4 @@ plt.xlabel('Counts')
 plt.title('Words in Topics')
 
 #plt.show()
-plt.savefig('topics.png')
+plt.savefig('imgs/topics.png')

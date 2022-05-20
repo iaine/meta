@@ -60,7 +60,7 @@ def word_cloud(counted_ngrams, file_path):
     plt.axis("off")
     plt.savefig(file_path)
 
-word_cloud(counted_ngrams, "word_cloud.png")
+word_cloud(counted_ngrams, "imgs/word_cloud.png")
 
 def count_as_histogram(counted_ngrams, file_path):
     objects = []
@@ -78,4 +78,4 @@ def count_as_histogram(counted_ngrams, file_path):
     plt.title('Words in Topics')
     plt.savefig(file_path)
 
-count_as_histogram(counted_ngrams, "word_freqs.png")
+count_as_histogram(counted_ngrams, "imgs/word_freqs.png")
